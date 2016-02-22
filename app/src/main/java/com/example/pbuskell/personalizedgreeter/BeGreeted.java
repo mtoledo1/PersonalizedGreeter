@@ -1,5 +1,6 @@
 package com.example.pbuskell.personalizedgreeter;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,8 +29,10 @@ public class BeGreeted extends AppCompatActivity {
 
     public void greetTheUser(View vw)
     {
+        Resources res = getResources();
+
         strUsersName = edtxtNameField.getText().toString();
 
-        txtvwGreetingSpace.setText("Hello, " + strUsersName + "!");
+        txtvwGreetingSpace.setText(String.format(res.getString(R.string.strGreeting), strUsersName));
     }
 }

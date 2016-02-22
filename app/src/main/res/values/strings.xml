@@ -3,4 +3,5 @@
     <string name="strPromptQuestion">What is your first name?</string>
     <string name="strGetGreeted">Get Greeted!</string>
     <string name="strNamePlaceholder">Name</string>
+    <string name="strGreeting">Hello, %1$s!</string>
 </resources>
