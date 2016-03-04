@@ -25,10 +25,10 @@
         android:layout_height="wrap_content"
         android:text="@string/strGetGreeted"
         android:id="@+id/btnGreetMe"
-        android:layout_below="@+id/edtxtNameField"
+        android:onClick="greetTheUser"
+        android:layout_below="@+id/edtxtMidNameField"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp"
-        android:onClick="greetTheUser" />
+        android:layout_marginTop="65dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,4 +48,28 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtMidNameField"
+        android:layout_below="@+id/edtxtNameField"
+        android:layout_alignLeft="@+id/edtxtNameField"
+        android:layout_alignStart="@+id/edtxtNameField"
+        android:layout_alignRight="@+id/edtxtNameField"
+        android:layout_alignEnd="@+id/edtxtNameField"
+        android:text="@string/strSecondNamePlaceholder"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtLastNameFIeld"
+        android:text="@string/strLastNamePlaceholder"
+        android:layout_below="@+id/edtxtMidNameField"
+        android:layout_alignLeft="@+id/edtxtMidNameField"
+        android:layout_alignStart="@+id/edtxtMidNameField"
+        android:layout_alignRight="@+id/edtxtMidNameField"
+        android:layout_alignEnd="@+id/edtxtMidNameField"
+        android:inputType="textPersonName" />
 </RelativeLayout>

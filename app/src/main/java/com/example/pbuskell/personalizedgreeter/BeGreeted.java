@@ -11,9 +11,13 @@ import android.widget.EditText;
 public class BeGreeted extends AppCompatActivity {
 
     String strUsersName = "";
+    String strMiddleName = "";
+    String strLastName = "";
 
     Button btnGreetMe;
     EditText edtxtNameField;
+    EditText edtxtMidNameField;
+    EditText edtxtLastNameField;
     TextView txtvwGreetingSpace;
 
 
@@ -24,6 +28,8 @@ public class BeGreeted extends AppCompatActivity {
 
         btnGreetMe = (Button) findViewById(R.id.btnGreetMe);
         edtxtNameField = (EditText) findViewById(R.id.edtxtNameField);
+        edtxtMidNameField = (EditText) findViewById(R.id.edtxtMidNameField);
+        edtxtLastNameField = (EditText) findViewById(R.id.edtxtLastNameFIeld);
         txtvwGreetingSpace = (TextView) findViewById(R.id.txtvwGreetingSpace);
     }
 
@@ -32,7 +38,9 @@ public class BeGreeted extends AppCompatActivity {
         Resources res = getResources();
 
         strUsersName = edtxtNameField.getText().toString();
+        strMiddleName = edtxtMidNameField.getText().toString();
+        strLastName = edtxtLastNameField.getText().toString();
 
-        txtvwGreetingSpace.setText(String.format(res.getString(R.string.strGreeting), strUsersName));
+        txtvwGreetingSpace.setText(String.format(res.getString(R.string.strGreeting), strUsersName, strMiddleName, strLastName));
     }
 }
